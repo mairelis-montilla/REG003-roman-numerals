@@ -2,7 +2,9 @@
   "name": "roman-numerals",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js",
+    "startMoon" : "nodemoon index.js"
   },
   "devDependencies": {
     "jest": "^27.0.6"
