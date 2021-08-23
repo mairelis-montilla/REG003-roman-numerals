@@ -4,7 +4,7 @@
   "scripts": {
     "test": "jest",
     "start": "node index.js",
-    "startMoon" : "nodemoon index.js"
+    "startMon" : "nodemon index.js"
   },
   "devDependencies": {
     "jest": "^27.0.6"
