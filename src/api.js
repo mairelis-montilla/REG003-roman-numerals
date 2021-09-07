@@ -43,7 +43,6 @@ const parse = (roman)=>{
       else if(/VX|VL|VC|VD|VM|LC|LD|LM|DM/gs.test(roman)){
         //SUSTRACION INVALID
         const invalidChart =roman.match(/VX|VL|VC|VD|VM|LC|LD|LM|DM/gs)[0].slice(0,1)
-        console.log(invalidChart)
         throw new Error(`Invalid substraction prefix ${invalidChart}`)
       }
       else{ throw new Error('Invalid order')}
@@ -59,7 +58,6 @@ const parse = (roman)=>{
       return acumulador -= current;
     }
   },0)
-console.log(total)
 return total;
 
 
@@ -67,9 +65,45 @@ return total;
 
 
 const stringify =(num)=>{
-  if( typeof (num) !== Number){
+  if( typeof (num) !== 'number'){
     throw new Error('Not a number')
   }
+  if(num > 3999 || num < 0){
+    throw new Error('out of range')
+  }
+  const unit = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+  const ten = ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'];
+  const hundred = [
+    '',
+    'C',
+    'CC',
+    'CCC',
+    'CD',
+    'D',
+    'DC',
+    'DCC',
+    'DCCC',
+    'CM',
+  ];
+  const thousand = ['', 'M', 'MM', 'MMM'];
+  const arrayNum = num.toString().split('').reverse();
+const newRoman =[]
+arrayNum.forEach((elem, index)=>{
+  if(index === 0){
+    newRoman.push(unit[parseInt(elem)])
+  }
+  if(index === 1){
+    newRoman.push(ten[parseInt(elem)])
+  }
+  if(index === 2){
+    newRoman.push(hundred[parseInt(elem)])
+  }
+  if(index === 3){
+    newRoman.push(thousand[parseInt(elem)])
+  }
+})
+const roman = newRoman.reverse().join('')
+return roman
 }
 
 module.exports = {
