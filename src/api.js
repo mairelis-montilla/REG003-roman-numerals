@@ -71,6 +71,7 @@ const stringify =(num)=>{
   if(num > 3999 || num < 0){
     throw new Error('out of range')
   }
+    //SETEAR VALORES
   const unit = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
   const ten = ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'];
   const hundred = [
@@ -88,6 +89,7 @@ const stringify =(num)=>{
   const thousand = ['', 'M', 'MM', 'MMM'];
   const arrayNum = num.toString().split('').reverse();
 const newRoman =[]
+  //TRANSFORMAR A ROMANS
 arrayNum.forEach((elem, index)=>{
   if(index === 0){
     newRoman.push(unit[parseInt(elem)])

@@ -4,9 +4,15 @@
   "scripts": {
     "test": "jest",
     "start": "node index.js",
-    "startMon" : "nodemon index.js"
+    "startMon": "nodemon index.js"
+  },
+  "bin": {
+    "roman-numerals": "./bin/cli.js"
   },
   "devDependencies": {
     "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "yargs": "^17.1.1"
   }
 }
