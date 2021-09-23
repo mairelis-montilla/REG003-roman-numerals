@@ -10,9 +10,9 @@
     "roman-numerals": "./bin/cli.js"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
     "jest": "^27.0.6"
-  },
-  "dependencies": {
-    "yargs": "^17.1.1"
   }
 }
