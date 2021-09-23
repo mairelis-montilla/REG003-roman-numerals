@@ -1,4 +1,4 @@
-const { parse, stringify } = require('./src/api.js');
+const { parse, stringify } = require('./src/api');
 
 const testValues = [
   [1, 'I'],

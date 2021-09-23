@@ -1,6 +1,6 @@
-const {parse , stringify } = require('./src/api');
+const { parse, stringify } = require('./src/api');
 
 module.exports = {
   parse,
-  stringify
-}
+  stringify,
+};
